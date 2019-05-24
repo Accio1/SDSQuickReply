@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>QuickReply</title>
+		<link rel="shortcut icon" type="image/png" href="/favicon.png">
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	</head>
+	
+	<body style= "margin:0">
+		<p>Click on the button to copy the text from the text field.</p>
+		
+		<div class="container">
+		<textarea class="CopyText" id="Text1" readonly>Check out this project to see how new SDS Curators are selected: https://scratch.mit.edu/projects/55738732/</textarea>
+		<button onclick="myFunction(1)">Copy Text</button>
+		<br>
+		<br>
+		</div>
+
+		<div class="container">
+		<textarea class="CopyText" id="Text2" readonly>We add projects from bottom to top. No need to double post, as it just adds extra work for us.</textarea>
+		<button onclick="myFunction(2)">Copy Text</button>
+		<br>
+		<br>
+		</div>
+		
+		<div class="container">
+		<textarea class="CopyText" id="Text3" readonly>This project can't be added as it was shared before a month before the start of this SDS. Feel free to create a new project which fits the theme though!</textarea>
+		<button onclick="myFunction(3)">Copy Text</button>
+		<br>
+		<br>
+		</div>
+		
+		<script>
+			function myFunction(area) {
+  				var copyText = document.getElementById("Text"+area);
+ 				copyText.select();
+  				document.execCommand("copy");
+				}
+		</script>
+	</body>
+</html>
